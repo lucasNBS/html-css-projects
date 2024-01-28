@@ -1,0 +1,113 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.button {
+  position: relative;
+  background-color: #ddd;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  z-index: 1;
+}
+
+.pop::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 4px solid #ddd;
+  transition: inset 200ms ease-in-out;
+  z-index: -1;
+}
+
+.pop:hover::before,
+.pop:focus::before {
+  inset: -8px;
+}
+
+.slide::before {
+  content: "";
+  background-color: #0AF;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 350ms ease-in-out;
+}
+
+.slide:hover,
+.slide:focus {
+  color: white;
+}
+
+.slide:hover::before,
+.slide:focus::before {
+  transform: scaleX(1);
+}
+
+.circle {
+  background-color: #0AF;
+  overflow: hidden;
+}
+
+.circle::before {
+  content: "";
+  background-color: #ddd;
+  position: absolute;
+  inset: 0;
+  border-radius: 100%;
+  transform: scale(1.4);
+  z-index: -1;
+  transition: all 350ms ease-in-out;
+}
+
+.circle:hover,
+.circle:focus {
+  color: white;
+}
+
+.circle:hover::before,
+.circle:focus::before {
+  transform: scale(0);
+}
+
+.underline::before {
+  content: "";
+  height: 4px;
+  position: absolute;
+  background-color: #0AF;
+  inset: 0;
+  top: unset;
+  z-index: -1;
+  transform: scaleX(0);
+  transition: all 200ms ease-in-out;
+  transform-origin: center;
+}
+
+.underline:hover::before,
+.underline:focus::before {
+  transform: scaleX(1);
+}

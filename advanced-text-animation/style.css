@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-family: sans-serif;
+  line-height: 10rem;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-container {
+  position: relative;
+  list-style: none;
+}
+
+.list-item {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.list-item::before {
+  content: "";
+  width: 120%;
+  height: 10px;
+  position: absolute;
+  top: calc(50% - 5px);
+  left: -10%;
+  background-color: #ddd;
+  transform: scaleX(0) skew(75deg);
+  transition: transform 200ms;
+  z-index: 2;
+}
+
+.list-item:hover::before {
+  transform: scaleX(1) skew(75deg);
+}
+
+.text {
+  cursor: default;
+  display: flex;
+  position: relative;
+  font-size: 10rem;
+  font-weight: bold;
+  color: black;
+  transition: color 0ms 200ms;
+}
+
+.text::before,
+.text::after {
+  color: #0AF;
+  content: attr(data-text);
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  height: 5rem;
+  font-size: 10rem;
+  font-weight: bold;
+  overflow: hidden;
+  transition: transform 200ms;
+}
+
+.text::before {
+  align-items: flex-start;
+  top: 0px;
+}
+
+.text::after {
+  align-items: flex-end;
+  bottom: 0px;
+}
+
+.list-item:hover .text {
+  transition: color 0ms 0ms;
+  color: transparent;
+}
+
+.list-item:hover .text::before,
+.list-item:hover .text::after {
+  transform: skew(15deg);
+}

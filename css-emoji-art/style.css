@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+}
+
+.face {
+  --emoji-size: 200px;
+  position: relative;
+  background-color: #ffc83d;
+  width: var(--emoji-size);
+  height: var(--emoji-size);
+  border-radius: 100%;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.eyes {
+  position: absolute;
+  top: calc(var(--emoji-size) * 0.25);
+  left: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  transform: translateX(-50%);
+}
+
+.eye {
+  background-color: black;
+  width: calc(var(--emoji-size) * 0.075);
+  height: calc(var(--emoji-size) * 0.15);
+  border-radius: 100%;
+}
+
+.smile {
+  --smile-height: calc(var(--emoji-size) * 0.3);
+  background-color: black;
+  position: absolute;
+  bottom: calc(var(--emoji-size) * 0.15);
+  left: calc(var(--emoji-size) * 0.5);
+  width: calc(var(--emoji-size) * 0.6);
+  height: var(--smile-height);
+  transform: translateX(-50%);
+  border-radius: 5% 5% var(--smile-height) var(--smile-height);
+}
+
+.mask {
+  background-color: white;
+  position: absolute;
+  bottom: calc(var(--emoji-size) * 0.15);
+  left: calc(calc(var(--emoji-size) * 0.5 - var(--emoji-size) * 0.3));
+  width: calc(var(--emoji-size) * 0.6);
+  height: calc(var(--emoji-size) * 0.3);
+  border: 5px solid #999;
+  border-radius: 8px;
+  transform: none;
+}
+
+.strap {
+  background-color: white;
+  position: absolute;
+  border: 5px solid #999;
+  width: calc(var(--emoji-size) * 0.5);
+  height: calc(var(--emoji-size) * 0.1);
+  z-index: -1;
+}
+
+.left-top {
+  left: calc(var(--emoji-size) * -0.4);
+  top: calc(var(--emoji-size) * -0.09);
+  transform: rotate(20deg);
+}
+
+.right-top {
+  right: calc(var(--emoji-size) * -0.4);
+  top: calc(var(--emoji-size) * -0.09);
+  transform: rotate(-20deg);
+}
+
+.left-bottom {
+  left: calc(var(--emoji-size) * -0.4);
+  bottom: calc(var(--emoji-size) * -0.09);
+  transform: rotate(-20deg);
+}
+
+.right-bottom {
+  right: calc(var(--emoji-size) * -0.4);
+  bottom: calc(var(--emoji-size) * -0.09);
+  transform: rotate(20deg);
+}
+
+.mouth {
+  background-color: black;
+  position: absolute;
+  bottom: calc(var(--emoji-size) * 0.15);
+  left: calc(var(--emoji-size) * 0.5);
+  width: calc(var(--emoji-size) * 0.25);
+  height: calc(var(--emoji-size) * 0.3);
+  transform: translateX(-50%);
+  border-radius: 100%;
+}

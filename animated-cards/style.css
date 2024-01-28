@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 2rem auto;
+}
+
+.card {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card.image {
+  padding: 0;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  aspect-ratio: 268 / 177;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 200ms;
+}
+
+.card-image img:hover {
+  transform: scale(1.04);
+}
+
+.card-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.card-content.image {
+  padding: 1rem;
+}
+
+.card-title {
+  width: 100%;
+  font-size: 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-description {
+  font-size: 0.9rem;
+  line-height: 1.125rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+}
+
+.card-buttons-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-button {
+  --color: hsl(200, 50%, 50%);
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  transition: background-color 200ms ease-in;
+}
+
+.card-button:first-child {
+  background-color: var(--color);
+  color: white;
+}
+
+.card-button:first-child:hover,
+.card-button:first-child:focus {
+  background-color: hsl(200, 75%, 50%);
+}
+
+.card-button:last-child {
+  background-color: white;
+  color: var(--color);
+  border: 1px solid var(--color);
+}
+
+.card-button:last-child:hover,
+.card-button:last-child:focus {
+  background-color: hsl(200, 50%, 50%, 10%);
+}

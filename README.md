@@ -5,6 +5,7 @@ Repositório com um conjunto de projetos em HTML e CSS ( e JS às vezes ) feitos
 ## Projetos simples
 - transparent-login-form
 - animated-cards
+- css-only-tooltip
 
 ## Projetos medianos
 - 

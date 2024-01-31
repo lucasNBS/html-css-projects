@@ -10,6 +10,7 @@ Repositório com um conjunto de projetos em HTML e CSS ( e JS às vezes ) feitos
 - css-emoji-art
 - css-image-hover-effect
 - custom-accessible-toggle-switch
+- animated-loading-spinner
 
 ## Projetos medianos
 - advanced-text-animation

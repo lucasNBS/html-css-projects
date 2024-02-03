@@ -1,0 +1,141 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.container {
+  background-color: #f8f9fb;
+  min-width: 100vw;
+  min-height: 100vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+}
+
+.chat-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+.chat-header-container {
+  width: 100%;
+  border-bottom: 1px solid #666;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header-day {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.chat-header-calendar {
+  font-size: 1.25rem;
+  opacity: 0.6;
+}
+
+.chat-content-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 1.25rem 1rem;
+}
+
+.chat-content-container::before {
+  content: "";
+  background-color: #999;
+  position: absolute;
+  top: calc(50% - 2rem);
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  grid-column: 1 / 2;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.chat-user-image-container {
+  position: relative;
+  z-index: 3;
+}
+
+.chat-user-image-container:nth-last-child(2)::after {
+  content: "";
+  position: absolute;
+  background-color: #f8f9fb;
+  inset: 0;
+  z-index: -1;
+}
+
+.chat-user-profile-picture {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #999;
+  border-radius: 100%;
+}
+
+.message-container {
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #999;
+  border-radius: 8px;
+}
+
+.message-header-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message-general {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.message-time {
+  opacity: 0.6;
+}
+
+.message-content-container {
+  background-color: #eee;
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.message-content {
+  width: 100%;
+  color: #666;
+}
+
+.message-general-icon {
+  width: 24px;
+  height: 24px;
+}

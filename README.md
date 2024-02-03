@@ -16,6 +16,8 @@ Repositório com um conjunto de projetos em HTML e CSS ( e JS às vezes ) feitos
 ## Projetos medianos
 - advanced-text-animation
 - 3d-flip-button
+- price-comparison-table
+- vertical-timeline
 
 ## Projetos complexos
 - youtube-clone

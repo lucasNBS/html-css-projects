@@ -3,6 +3,7 @@
 Repositório com um conjunto de projetos em HTML e CSS ( e JS às vezes ) feitos como parte de um plano de estudo pessoal
 
 ## Projetos simples
+
 - transparent-login-form
 - animated-cards
 - css-only-tooltip
@@ -12,13 +13,16 @@ Repositório com um conjunto de projetos em HTML e CSS ( e JS às vezes ) feitos
 - custom-accessible-toggle-switch
 - animated-loading-spinner
 - animated-hamburguer-menu
+- parallax-effect
 
 ## Projetos medianos
+
 - advanced-text-animation
 - 3d-flip-button
 - price-comparison-table
 - vertical-timeline
 
 ## Projetos complexos
+
 - youtube-clone
-- 
+-
